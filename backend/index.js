@@ -10,10 +10,12 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get("/",(request,response) => {
-    console.log(request)
-    return response.status(234).send("It is a simple project")
-})
+app.get("/", (request, response) => {
+    console.log("Request received at /");
+    response.set("Cache-Control", "no-store"); // Disable caching
+    return response.status(200).send("It is a simple project");
+});
+
 
 app.use('/Book', booksRoute)
 
