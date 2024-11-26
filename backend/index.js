@@ -20,13 +20,15 @@ app.use('/Book', booksRoute)
 mongoose
     .connect(mongoDBURL)
     .then(() => {
-        console.log("App is connected to database");
+        console.log("App is connected to the database");
         app.listen(PORT, () => {
-            console.log(`App is listening to the port: ${PORT}`);
+            console.log(`App is listening on port: ${PORT}`);
         });
     })
-    .catch((erroe) => {
-        console.log(erroe)
-    })
+    .catch((error) => {
+        console.error("Database connection error:", error);
+        process.exit(1);
+    });
+
 
 
