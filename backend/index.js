@@ -12,7 +12,7 @@ app.use(cors());
 
 app.get("/", (request, response) => {
     console.log("Request received at /");
-    response.set("Cache-Control", "no-store"); // Disable caching
+    response.set("Cache-Control", "no-store"); 
     return response.status(200).send("It is a simple project");
 });
 
