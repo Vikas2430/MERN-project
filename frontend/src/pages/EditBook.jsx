@@ -13,7 +13,7 @@ const EditBook = () => {
   const {id} = useParams();
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/book/${id}`)
+    axios.get(`${baseUrl}/${id}`)
     .then((response) => {
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);
