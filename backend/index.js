@@ -4,14 +4,6 @@ import mongoose from "mongoose";
 import booksRoute from "./routes/booksRoute.js"
 import cors from 'cors';
 
-const corsOptions = {
-    origin: 'https://mern-project-1zr5.vercel.app', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],      
-    credentials: true                               
-  };
-  
-  app.use(cors(corsOptions))
-
 const app = express();
 
 app.use(express.json());
