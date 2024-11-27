@@ -1,15 +1,6 @@
 import express from 'express';
 import { Book } from "../models/book-models.js"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-const routing = createBrowserRouter(routing, {
-  future: {
-    v7_startTransition: true,       
-    v7_relativeSplatPath: true,    
-  },
-});
-
-<RouterProvider router={router} />;
 
 const router = express.Router();
 
