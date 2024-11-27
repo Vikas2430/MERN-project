@@ -9,7 +9,7 @@ const routing = createBrowserRouter(routing, {
   },
 });
 
-<RouterProvider router={routing} />;
+<RouterProvider router={router} />;
 
 const router = express.Router();
 
