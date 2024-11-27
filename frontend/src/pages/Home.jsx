@@ -8,7 +8,7 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { baseUrl } from '../utils/ApiConstants';
 
 const Home = () => {
-  const [Book, setBook] = useState([]); // Ensure it's an array initially
+  const [Book, setBook] = useState([]); 
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,13 +16,13 @@ const Home = () => {
     axios
       .get(baseUrl)
       .then((response) => {
-        console.log('API Response:', response.data); // Log response structure for debugging
-        setBook(Array.isArray(response.data.data) ? response.data.data : []); // Ensure valid array
+        console.log('API Response:', response.data); 
+        setBook(Array.isArray(response.data.data) ? response.data.data : []); 
         setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
-        setBook([]); // Default to empty array on error
+        setBook([]);
         setLoading(false);
       });
   }, []);
