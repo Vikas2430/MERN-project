@@ -18,5 +18,8 @@
     "mongodb": "^6.10.0",
     "mongoose": "^8.8.2",
     "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
   }
 }
