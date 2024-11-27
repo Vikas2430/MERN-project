@@ -8,7 +8,7 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { API_BOOK } from '../utils/ApiConstants';
 
 const Home = () => {
-  const [Book, setBook] = useState([]);
+  const [book, setBook] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -45,7 +45,7 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            {Book.map((book, index) => (
+            {book.map((book, index) => (
               <tr key={book._id} className='h-8'>
                 <td className='border border-slate-600 rounded-md text-center'>
                   {index + 1}
