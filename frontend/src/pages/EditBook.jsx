@@ -3,6 +3,7 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { API_BOOK } from '../utils/ApiConstants';
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
@@ -13,7 +14,7 @@ const EditBook = () => {
   const {id} = useParams();
   useEffect(() => {
     setLoading(true);
-    axios.get(`${baseUrl}/${id}`)
+    axios.get(`${API_BOOK}/${id}`)
     .then((response) => {
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);

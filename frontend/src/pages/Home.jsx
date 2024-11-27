@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
-import { baseUrl } from '../utils/ApiConstants';
+import { API_BOOK } from '../utils/ApiConstants';
 
 const Home = () => {
   const [Book, setBook] = useState([]);
@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(baseUrl)
+      .get(API_BOOK)
       .then((response) => {
         setBook(response.data.data);
         setLoading(false);
