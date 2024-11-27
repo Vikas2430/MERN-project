@@ -17,7 +17,6 @@ const Home = () => {
       .then((response) => {
         setBook(response.data.data);
         setLoading(false);
-        console.log(baseUrl);
       })
       .catch((error) => {
         console.log(error);
